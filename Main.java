@@ -1,5 +1,4 @@
 
-
 public class Main {
 
     public static void printDetails(Vehicle vehicle) {
@@ -12,15 +11,12 @@ public class Main {
         vehicle.displayInfo();
         System.out.println();
 
-       
         vehicle = new Motorcycle("Honda", "Click", 2023, "Matic");
         vehicle.displayInfo();
         System.out.println();
 
-                vehicle = new Truck("Isuzu", "N-Series", 2022, 5.0);
+        vehicle = new Truck("Isuzu", "N-Series", 2022, 5.0);
         vehicle.displayInfo();
-        System.out.println();
-
         System.out.println();
 
         Car car = new Car("Tesla", "Roadster", 2026, 4);
