@@ -1,37 +1,38 @@
 
-public class Main
-{
-   public static void main(String[] args)
-   {
-      Vehicle v1 = new Vehicle();
-      v1.brand = "Toyota";
-      v1.model = "Supra";
-      v1.year = 1993;
-      
-      v1.displayInfo();
-      System.out.println("Age: " + v1.calculateAge());
-      System.out.println("Vintage: " + v1.isVintage());
-      System.out.println();
 
-      Vehicle v2 = new Vehicle();
-      v2.brand = "Honda";
-      v2.model = "Civic";
-      v2.year = 1998;
-      
-      v2.displayInfo();
-      System.out.println("Age: " + v2.calculateAge());
-      System.out.println("Vintage: " + v2.isVintage());
-      System.out.println();
+public class Main {
 
-      Vehicle v3 = new Vehicle();
-      v3.brand = "Mitsubishi";
-      v3.model = "Lancer";
-      v3.year = 2001;
-      
-      v3.displayInfo();
-      System.out.println("Age: " + v3.calculateAge());
-      System.out.println("Vintage: " + v3.isVintage());
-      System.out.println();
-   }
+    public static void printDetails(Vehicle vehicle) {
+        vehicle.displayInfo();
+    }
+
+    public static void main(String[] args) {
+
+        Vehicle vehicle = new Car("Toyota", "Supra", 2026, 4);
+        vehicle.displayInfo();
+        System.out.println();
+
+       
+        vehicle = new Motorcycle("Honda", "Click", 2023, "Matic");
+        vehicle.displayInfo();
+        System.out.println();
+
+                vehicle = new Truck("Isuzu", "N-Series", 2022, 5.0);
+        vehicle.displayInfo();
+        System.out.println();
+
+        System.out.println();
+
+        Car car = new Car("Tesla", "Roadster", 2026, 4);
+        Motorcycle motor = new Motorcycle("TMX", "V3", 2026, "Matic");
+        Truck truck = new Truck("Mitsubishi", "Canter", 2025, 5.0);
+
+        printDetails(car);
+        System.out.println();
+
+        printDetails(motor);
+        System.out.println();
+
+        printDetails(truck);
+    }
 }
-
